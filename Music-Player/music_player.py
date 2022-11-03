@@ -49,7 +49,7 @@ window.title('Mp3 Player')
 instance = vlc.Instance()
 player = instance.media_player_new()
 
-my_music = glob.glob('/home/shitij_agrawal/Music/*.mp3')  # path to music folder
+my_music = glob.glob('/Users/zkhan@zaizi.com/Music/*.mp3')  # path to music folder
 
 play_image = PhotoImage(file='images/play.png')
 pause_image = PhotoImage(file='images/pause.png')
@@ -57,11 +57,11 @@ forward_image = PhotoImage(file='images/forward.png')
 backward_image = PhotoImage(file='images/backward.png')
 stop_image = PhotoImage(file='images/stop.png')
 
-music_label = tk.Label(window, text=music_name())
+music_label = tk.Label(window, text=music_name(),anchor="center")
 
 play = tk.Button(window, image=play_image, command=play_music)
 pause = tk.Button(window, image=pause_image, command=pause_music)
-forward = tk.Button(window, image=forward_image, command=next_music)
+forward = tk.Button(window,image=forward_image, command=next_music)
 backward = tk.Button(window, image=backward_image, command=previous_music)
 stop = tk.Button(window, image=stop_image, command=lambda: sys.exit())
 
@@ -72,4 +72,7 @@ backward.place(x=70, y=50)
 stop.place(x=250, y=50)
 music_label.place(x=10, y=0)
 
+
 window.mainloop()
+
+
